@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f5f2;
+            color: #5d4037;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #d7ccc8;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #5d4037;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #bcaaa4;
+        }
+        
+        nav a.active {
+            background-color: #8d6e63;
+            color: white;
+        }
+        
+        .page-header {
+            background-color: #a1887f;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .page-header h1 {
+            font-size: 2rem;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 1rem 0 3rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: #d7ccc8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #795548;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-description {
+            margin-bottom: 1rem;
+            color: #757575;
+            font-size: 0.9rem;
+        }
+        
+        .product-price {
+            font-weight: bold;
+            color: #8d6e63;
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #8d6e63;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #6d4c41;
+        }
+        
+        footer {
+            background-color: #d7ccc8;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .copyright {
+            margin-top: 1rem;
+            color: #5d4037;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products" class="active">Products</a></li>
+                    <li><a href="/cart">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Pottery Collection</h1>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">Ceramic Bowl</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Glazed Ceramic Bowl</h3>
+                        <p class="product-description">Beautifully glazed bowl perfect for soups and salads.</p>
+                        <p class="product-price">$24.99</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">Mug</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Hand-thrown Mug</h3>
+                        <p class="product-description">Comfortable handle and perfect size for your morning coffee.</p>
+                        <p class="product-price">$18.50</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">Vase</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Decorative Vase</h3>
+                        <p class="product-description">Elegant vase to brighten up any room.</p>
+                        <p class="product-price">$36.75</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">Plate Set</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Dinner Plate Set</h3>
+                        <p class="product-description">Set of 4 handcrafted dinner plates.</p>
+                        <p class="product-price">$45.00</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">Teapot</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Ceramic Teapot</h3>
+                        <p class="product-description">Traditional design with modern functionality.</p>
+                        <p class="product-price">$29.99</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">Serving Platter</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Large Serving Platter</h3>
+                        <p class="product-description">Perfect for serving main dishes at gatherings.</p>
+                        <p class="product-price">$39.50</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">Candle Holder</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Ceramic Candle Holder</h3>
+                        <p class="product-description">Create a cozy atmosphere with this beautiful holder.</p>
+                        <p class="product-price">$16.25</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">Plant Pot</div>
+                    <div class="product-info">
+                        <h3 class="product-title">Small Plant Pot</h3>
+                        <p class="product-description">Ideal for small plants and succulents.</p>
+                        <p class="product-price">$14.99</p>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Pottery Shop - Handmade Ceramics</p>
+                <p class="copyright">&copy; 2023 Pottery Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const productCard = this.closest('.product-card');
+                const productName = productCard.querySelector('.product-title').textContent;
+                alert(`${productName} added to cart!`);
+            });
+        });
+    </script>
+</body>
+</html>
